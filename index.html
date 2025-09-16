@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tommys Game</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 1rem; background:#fafafa; }
+    h1 { color:#2a4d69; }
+    button { margin:0.25rem; padding:0.5rem 1rem; border-radius:8px; border:none; cursor:pointer; background:#2a4d69; color:white; }
+    button:hover { background:#1d3347; }
+    li { margin:0.25rem 0; }
+    .card { background:white; border-radius:12px; padding:1rem; box-shadow:0 2px 5px rgba(0,0,0,0.1); margin-bottom:1rem; }
+  </style>
+</head>
+<body>
+  <h1>🎲 Tommys Game</h1>
+  <div class="card">
+    <button onclick="renderPredictions()">🔄 Neu generieren</button>
+    <button onclick="exportCSV()">📄 Export CSV</button>
+    <button onclick="exportPDF()">📑 Export PDF</button>
+  </div>
+  <div id="predictions" class="card">Wird geladen…</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="lotto.js"></script>
+</body>
+</html>
